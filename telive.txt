@@ -1,0 +1,25 @@
+sudo wget https://raw.githubusercontent.com/sq5bpf/telive/master/scripts/install_telive.sh
+sudo chmod 755 install_telive.sh
+./install_telive.sh
+Running the Software
+Open a terminal window and browse to ~/tetra/osmo-tetra-sq5bpf/src and run ./receiver1 1.
+cd ~/tetra/osmo-tetra-sq5bpf/src
+./receiver1 1
+Open a second terminal window or tab and open a specially sized xterm window using the following.
+/usr/bin/xterm -font fixed -bg black -fg white -geometry 203x60
+In the xterm window, browse to ~/tetra/teliveand run ./rxx.
+cd ~/tetra/telive
+./rxx
+Open another terminal window or tab and browse to /tetra/bin and run ./tetrad.
+cd /tetra/bin
+./tetrad
+Open another terminal window or tab and open GNU Radio Companion by typing the following.
+gnuradio-companion
+In GNU Radio open the telive_1ch_simple_gr37.grc file which is found in ~/tetra/telive/gnuradio-companion.
+Execute the flowgraph by clicking on the play button icon on GNU Radio Companion toolbar.
+At the bottom of the screen that pops up look for the Frequency: text box and enter the centre frequency of the TETRA signal that you want to monitor. You can also click on the centre of the TETRA signal spikes in the Full Spectrum view to tune to a different signal.
+Enter the PPM offset of your RTL-SDR dongle in the ppm: text box.
+Finally adjust the SDR Input Gain setting for best reception.
+
+
+
